@@ -47,7 +47,7 @@ app.get('/api', (request, response) => {
 
     const keys = Object.keys(uselessFacts)
     var randomKey = keys[Math.floor(Math.random()*keys.length)]
-    var randomValue = uselessFacts[randomKey]
+    var randomValue = uselessFacts[randomKey].fact
 
     console.log(randomKey)
     console.log(randomValue)
