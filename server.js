@@ -5,56 +5,56 @@ const PORT = 8000
 
 app.use(cors())
 
-let rappers = {
-    '21 savage': {
-        'age': 28,
-        'birthName': 'Shéyaa Bin Abraham-Joseph',
-        'birthdate': '22 October 1992', 
-        'birthLocation': 'London, England',
-        'origin': 'Atlanta, Georgia',
-        'genre': 'hip hop, trap, rap, horrorcore',
-        'occupation': 'rapper, songwriter, record producer',
-        'yearsActive': '2013-present',
-        'labels': 'Epic, Slaughter Gang',
-        'children': 3
+let uselessFacts = {
+
+    '1': {
+        'id': 1,
+        'fact': 'Noel used to be a roadie for the Inspiral Carpets before joining Oasis.',
     },
-    'chance the rapper':{
-        'age': 28,
-        'birthName': 'Chancelor Jonathan Bennett',
-        'birthdate': 'April 16, 1993', 
-        'birthLocation': 'London, England',
-        'origin': 'Chicago, Illinois',
-        'genre': 'hip hop, alternative hip hop, r & b',
-        'occupation': 'rapper, singer, song writer, record producer, activist, actor, philanthropist',
-        'yearsActive': '2011-present',
-        'labels': 'none',
-        'children': 0
+
+    '2': {
+        'id': 2,
+        'fact': '*Angrily shakes tambourine at bloke*'
     },
-    'unknown':{
-        'age': 'unknown',
-        'birthName': 'unknown',
-        'birthdate': 'unknown', 
-        'birthLocation': 'unknown',
-        'origin': 'unknown',
-        'genre': 'unknown',
-        'occupation': 'unknown',
-        'yearsActive': 'unknown',
-        'labels': 'unknown',
-        'children': 'unknown'
+
+    '3': {
+        'id': 3,
+        'fact': 'Noel was a regular at the Manchester Club The Hacienda and there is a video where you can see him there.',
+    },
+
+    '4': {
+        'id': 4,
+        'fact': 'Radio Supernova 106.6 fm was the official radio station for those travelling to Oasis Knebworth gigs on the 10th/11th August 1996. The station played a mixture of tracks from Oasis and all supporting artists over the two days along with concert and travel info.'
+    },
+
+    '5': {
+        'id': 5,
+        'fact': 'Oasis was founded in 1991.',
+    },
+
+    '6': {
+        'id': 6,
+        'fact': 'Both Liam and Noel support Manchester City, so that\'\s like Oasis\'\ official football team',
     }
+
 }
 
 app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
 
-app.get('/api/:name', (request, response) => {
-    const rapperName = request.params.name.toLowerCase()
-    if(rappers[rapperName]){
-        response.json(rappers[rapperName])
-    }else{
-        response.json(rappers['unknown'])
-    }
+app.get('/api', (request, response) => {
+
+    const keys = Object.keys(uselessFacts)
+    var randomKey = keys[Math.floor(Math.random()*keys.length)]
+    var randomValue = uselessFacts[randomKey]
+
+    console.log(randomKey)
+    console.log(randomValue)
+    response.json(randomValue)
+   
+    // let rando = Math.floor(Math.random() * uselessFacts.length)
+    // console.log(uselessFacts[rando])
 })
 
 app.listen(process.env.PORT || PORT, () => {
