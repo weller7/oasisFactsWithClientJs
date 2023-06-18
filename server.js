@@ -4,6 +4,7 @@ const cors = require('cors')
 const PORT = 8000
 
 app.use(cors())
+app.use(express.static('public'))
 
 let uselessFacts = {
 
@@ -41,6 +42,10 @@ let uselessFacts = {
 
 app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
+})
+
+app.get('/info', (request, response) => {
+    response.sendFile(__dirname + '/info.html')
 })
 
 app.get('/api', (request, response) => {

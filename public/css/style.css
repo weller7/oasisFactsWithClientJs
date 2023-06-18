@@ -1,0 +1,86 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img{
+  display: block;
+  margin: 0 auto;
+  /*
+  max-width: 100vh;
+  max-height: 100vh;*/
+  max-width: 80%;
+
+  -webkit-mask-image: linear-gradient(#000, rgba(0,0,0,0.5));
+  mask-image: linear-gradient(#000, rgba(0,0,0,0.5));
+
+}
+@media screen and (min-width: 1080px) {
+  img{
+    max-width: 100vh;
+    max-height: 100vh;
+  }
+}
+header{
+  background-color: #EDF0F2;
+  color: #1C52A6;
+  height: 39px;
+  width: auto;
+  margin-top: -18px;
+}
+ul{
+  padding: 10px 10px;
+  list-style: none;
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  font-weight: bold;
+}
+li{
+  text-decoration: none;
+  padding: 0px 17px;
+}
+ul li:first-child {
+  margin-right: auto;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  color: #153a74;
+}
+body{
+  text-align: center;
+  background-color: #1C52A6;
+  color: #EDF0F2;
+}
+h1{
+  font-family: helvetica, sans-serif;
+}
+p{
+  padding: 10px 60px;
+  font-family: 'Space Mono', monospace;
+}
+button{
+  background-color: #EDF0F2;
+  color: #1C52A6;
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+  border: #EDF0F2;
+  padding: 8px 8px;
+  border-radius: 15px;
+}
+button:hover{
+  background-color: #d3d4d5;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
