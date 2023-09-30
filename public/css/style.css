@@ -63,6 +63,9 @@ body{
 h1{
   font-family: helvetica, sans-serif;
 }
+.info{
+  font-family: 'Space Mono', monospace;
+}
 p{
   padding: 10px 60px;
   font-family: 'Space Mono', monospace;
