@@ -1,7 +1,7 @@
 # Oasis Facts
 Get facts about the band Oasis.
 
-**Link to project:** https//:oasisfacts.cyclic.app/
+**Link to project:** http://oasisfacts.cyclic.app/
 
 ## How It's Made:
 
