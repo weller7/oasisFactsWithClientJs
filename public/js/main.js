@@ -3,7 +3,7 @@ document.querySelector('button').addEventListener('click', getRandom)
 
 function getRandom() {
 
-  fetch("https://oasisfactsapi.cyclic.app/api")
+  fetch("https://oasis-api-snowy.vercel.app/api")
   .then (res => res.json())
   .then (data => {
     console.log(data)
