@@ -41,11 +41,11 @@ let uselessFacts = {
 }
 
 app.get('/', (request, response) => {
-    response.sendFile(__dirname + '/index.html'+ "/public")
+    response.sendFile(__dirname + '/index.html')
 })
 
 app.get('/info', (request, response) => {
-    response.sendFile(__dirname + '/info.html'+ "/public")
+    response.sendFile(__dirname + '/info.html')
 })
 
 app.get('/api', (request, response) => {
